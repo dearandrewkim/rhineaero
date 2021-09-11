@@ -240,7 +240,7 @@ h3 {
     right: 0;
     z-index: -1;
     -webkit-backface-visibility: hidden; // for Chrome Windows
-    transform: skewY(-4deg);
+    transform: skewY(-3deg);
     transform-origin: 100% 0;
   }
 }
@@ -351,6 +351,20 @@ body,
   width: auto;
   opacity: 0.5;
 }
+
+
+@include media-breakpoint-up(md) {
+  .client-logo {
+    height: 60px;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .client-logo {
+    height: 70px;
+  }
+}
+
 
 
 

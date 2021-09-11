@@ -12580,8 +12580,8 @@ h3,
   right: 0;
   z-index: -1;
   -webkit-backface-visibility: hidden;
-  -webkit-transform: skewY(-4deg);
-          transform: skewY(-4deg);
+  -webkit-transform: skewY(-3deg);
+          transform: skewY(-3deg);
   -webkit-transform-origin: 100% 0;
           transform-origin: 100% 0;
 }
@@ -12691,6 +12691,16 @@ body,
   opacity: 0.5;
 }
 
+@media (min-width: 768px) {
+  .client-logo {
+    height: 60px;
+  }
+}
+@media (min-width: 1200px) {
+  .client-logo {
+    height: 70px;
+  }
+}
 lottie-player {
   margin: 0 auto;
 }
