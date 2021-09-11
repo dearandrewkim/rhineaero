@@ -1,0 +1,361 @@
+// CUSTOM CSS
+
+// Configuration
+@import "bootstrap/scss/functions";
+
+// Global Font & Colours
+$enable-negative-margins: true;
+$primary: #010927;
+$font-family-sans-serif: 'Barlow',
+sans-serif;
+$white: #FFF;
+
+$headings-font-family: 'Oswald',
+sans-serif;
+$headings-font-weight: 300;
+// $headings-color:              $secondary;
+$display-font-weight: 300;
+
+$spacer: 1rem;
+
+$headings-margin-bottom: $spacer * 1;
+
+$font-size-root: 18px;
+$line-height-base: 1.8;
+$body-color: #FFFFFF;
+
+// Nav-bar
+
+$navbar-light-color: $primary;
+$navbar-light-hover-color: rgba($primary, .4);
+$navbar-light-active-color: rgba($primary, .9);
+
+$navbar-dark-color: rgba($white, .85) !default;
+$navbar-dark-hover-color: $white;
+$navbar-dark-active-color: $white !default;
+
+// BOOTSTRAP
+
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+// Layout & components
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/tables";
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/dropdown";
+@import "bootstrap/scss/button-group";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar";
+@import "bootstrap/scss/card";
+@import "bootstrap/scss/accordion";
+// @import "bootstrap/scss/breadcrumb";
+@import "bootstrap/scss/pagination";
+@import "bootstrap/scss/badge";
+@import "bootstrap/scss/alert";
+//@import "bootstrap/scss/progress";
+@import "bootstrap/scss/list-group";
+//@import "bootstrap/scss/close";
+//@import "bootstrap/scss/toasts";
+@import "bootstrap/scss/modal";
+//@import "bootstrap/scss/tooltip";
+@import "bootstrap/scss/popover";
+@import "bootstrap/scss/carousel";
+//@import "bootstrap/scss/spinners";
+//@import "bootstrap/scss/offcanvas";
+
+// Helpers
+@import "bootstrap/scss/helpers";
+
+// Utilities
+@import "bootstrap/scss/utilities/api";
+
+
+// Then add additional custom code here
+
+// Global
+
+body {
+  font-family: $font-family-sans-serif;
+  background-color: #fff;
+  font-weight: 400;
+}
+
+.bg-image-full {
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+}
+
+
+h1,
+h2,
+h3 {
+  letter-spacing: 0.1em;
+}
+
+
+.main-subtitle {
+  letter-spacing: 0.1em;
+  margin-top: -3rem;
+}
+
+@include media-breakpoint-up(md) {
+  .main-subtitle {
+    margin-top: -4rem;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .main-subtitle {
+    margin-top: -6rem;
+  }
+}
+
+
+
+
+.section {
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+}
+
+// Navbar
+
+.navbar-brand {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $primary;
+}
+
+
+.btn {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.nav-link.active {
+  text-decoration: underline !important;
+}
+
+
+.navbar-nav {
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+
+// Header
+
+.angled_section_top {
+  position: relative;
+  z-index: 1;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+  top: 30px;
+
+  &:before {
+    background: inherit;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    -webkit-backface-visibility: hidden; // for Chrome Windows
+  }
+
+  &:before {
+    top: -100px;
+    transform: skewY(-3deg);
+    transform-origin: 100% 0;
+  }
+}
+
+// Footer
+
+.angled_section_bottom {
+  position: relative;
+  z-index: 1;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+
+  &:before {
+    background: inherit;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    -webkit-backface-visibility: hidden; // for Chrome Windows
+  }
+
+  &:before {
+    transform: skewY(-3deg);
+    transform-origin: 100% 0;
+  }
+}
+
+.angled_section_top_bottom {
+  position: relative;
+  z-index: 1;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  &:before {
+    top: -100px;
+    background: inherit;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    -webkit-backface-visibility: hidden; // for Chrome Windows
+    transform: skewY(-3deg);
+    transform-origin: 100% 0;
+  }
+
+  &:after {
+    background: inherit;
+    bottom: 0px;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    -webkit-backface-visibility: hidden; // for Chrome Windows
+    transform: skewY(-4deg);
+    transform-origin: 100% 0;
+  }
+}
+
+
+
+html,
+body,
+.scroll-snap-container {
+  height: 100%;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+}
+
+/*.navbar {
+    background-image: linear-gradient(to right, #000C37, #273566);
+  }
+  */
+
+.fixed-top.scrolled {
+  background: $gray-900;
+  transition: background-color 800ms linear;
+}
+
+.fixed-top.transparent {
+  background-color: transparent !important;
+  transition: background-color 800ms linear;
+}
+
+
+.services-container {
+  position: relative;
+}
+
+.services-item {
+  height: 22rem;
+  width: 100%;
+  opacity: 1;
+}
+
+.services-text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease !important;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+}
+
+.services-container:hover .services-text {
+  opacity: 1 !important;
+}
+
+
+.portfolio-item {
+  object-fit: cover;
+  height: 20rem;
+  width: 100%;
+  opacity: 1;
+}
+
+
+.portfolio-item-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease !important;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.portfolio-item-container {
+  position: relative;
+}
+
+.portfolio-item-container:hover .portfolio-item-overlay {
+  opacity: 1 !important;
+}
+
+.portfolio-text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.client-logo {
+  height: 50px;
+  width: auto;
+  opacity: 0.5;
+}
+
+
+
+// Centering Lottie
+
+lottie-player {
+  margin: 0 auto;
+}
